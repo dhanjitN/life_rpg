@@ -1,5 +1,6 @@
 ## 17th may
 
-- setup nextjs + /login + /status page
+- setup nextjs 
 - wireframe for the FE 
 - add it here 
+
