@@ -11,3 +11,7 @@
 - ask for calendar access 
 - home page + login page
 - protect the routes 
+
+## 19th 
+- replace supabase with convex
+- use clerk for google login + calendar access 
