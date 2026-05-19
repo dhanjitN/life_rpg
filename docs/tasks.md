@@ -15,3 +15,5 @@
 ## 19th 
 - replace supabase with convex
 - use clerk for google login + calendar access 
+
+- implement google login + calendar access clerk 
