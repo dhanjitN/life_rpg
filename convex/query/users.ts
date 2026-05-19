@@ -12,11 +12,3 @@ export const userDetail = query({
 })
 
 
-export const userGoalToday = query({
-    args: {
-        id: v.id("users")
-    },
-    handler : async (ctx , args) => {
-        const goals = await ctx.db.query("users").withIndex()
-    }
-})
