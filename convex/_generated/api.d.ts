@@ -8,8 +8,9 @@
  * @module
  */
 
-import type * as messages from "../messages.js";
-import type * as query_users from "../query/users.js";
+import type * as schemas from "../schemas.js";
+import type * as users from "../users.js";
+import type * as webhook from "../webhook.js";
 
 import type {
   ApiFromModules,
@@ -18,8 +19,9 @@ import type {
 } from "convex/server";
 
 declare const fullApi: ApiFromModules<{
-  messages: typeof messages;
-  "query/users": typeof query_users;
+  schemas: typeof schemas;
+  users: typeof users;
+  webhook: typeof webhook;
 }>;
 
 /**
