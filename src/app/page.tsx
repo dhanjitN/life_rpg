@@ -2,8 +2,7 @@
 
 import { Authenticated, Unauthenticated } from "convex/react";
 import { SignInButton, UserButton } from "@clerk/nextjs";
-
-
+import { UserDetails } from "@/components/user-details";
 export default function Home() {
   return (
     <>
@@ -21,7 +20,8 @@ export default function Home() {
 function Content() {
   return(
     <div>
-      hi
+      welcome to the login page 
+      <UserDetails/>
     </div>
   )
 }
