@@ -8,9 +8,8 @@
  * @module
  */
 
-import type * as schemas from "../schemas.js";
+import type * as http from "../http.js";
 import type * as users from "../users.js";
-import type * as webhook from "../webhook.js";
 
 import type {
   ApiFromModules,
@@ -19,9 +18,8 @@ import type {
 } from "convex/server";
 
 declare const fullApi: ApiFromModules<{
-  schemas: typeof schemas;
+  http: typeof http;
   users: typeof users;
-  webhook: typeof webhook;
 }>;
 
 /**
