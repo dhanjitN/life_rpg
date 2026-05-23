@@ -1,0 +1,12 @@
+{
+  "name": "one-life",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"pnpm --filter api dev\" \"pnpm --filter web dev\"",
+    "db:push": "pnpm --filter db push",
+    "db:studio": "pnpm --filter db studio"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
