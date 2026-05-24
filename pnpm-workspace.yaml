@@ -1,8 +1,0 @@
-packages:
-  - "apps/*"
-  - "packages/*"
-allowBuilds:
-  '@prisma/client': false
-  better-sqlite3: false
-  es5-ext: false
-  esbuild: false
