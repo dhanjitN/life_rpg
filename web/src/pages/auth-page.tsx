@@ -1,5 +1,8 @@
+import { LoginForm } from "@/components/login-form"
 export default function AuthPage (){
     return (
-        <h2>Authentication Page</h2>
+        <section className="flex justify-center items-center pt-36">
+            <LoginForm/>
+        </section>
     )
 }
