@@ -18,7 +18,7 @@ export const auth = betterAuth({
                 "openid",
                 "email",
                 "profile",
-                "https://www.googleapis.com/auth/calendar"
+                "https://www.googleapis.com/auth/calendar.readOnly"
             ],
             prompt: "select_account consent",
             accessType: "offline",
@@ -26,3 +26,4 @@ export const auth = betterAuth({
     },
     secret: process.env.BETTER_AUTH_SECRET
 })
+
