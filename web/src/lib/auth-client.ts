@@ -15,6 +15,7 @@ export const googleLogin = async () => {
 export const getCalendarAccess = async () => {
     await authClient.linkSocial({
         provider: "google",
-        scopes: ["https://www.googleapis.com/auth/calendar.readonly"]
+        scopes: ["https://www.googleapis.com/auth/calendar.readonly"],
+        callbackURL: "http://localhost:5173/status"
     })
 }
