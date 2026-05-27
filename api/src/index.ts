@@ -22,7 +22,9 @@ app.get("/", (c)=>{
   return c.text("Hi the server is running")
 })
 
+import calendarRoute from "./routes/calendar.route.js"
 
+app.route("/calendar", calendarRoute);
 
 export default {
   port: 3000,
