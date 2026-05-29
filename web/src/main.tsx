@@ -15,5 +15,5 @@ createRoot(document.getElementById('root')!).render(
         <Route path='/status' element={<StatusPage />} />
       </Routes>
     </BrowserRouter>
-  </StrictMode>,
+  </StrictMode>
 )
