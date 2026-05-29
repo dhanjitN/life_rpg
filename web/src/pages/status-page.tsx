@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-
+import CalendarHeatmap from 'react-calendar-heatmap';
+import 'react-calendar-heatmap/dist/styles.css';
 
 export default function StatusPage() {
     let username = "Dhanjit Nath";
@@ -29,12 +30,46 @@ export default function StatusPage() {
                     You have a good plan ahead,
                     You can add time for  resting before starting ,
                     Things are going to get hard, you might want to drop out,
-                    but think about the person you want to become one day. 
-                    This will help you achieve that ! 
+                    but think about the person you want to become one day.
+                    This will help you achieve that !
                 </div>
             </article>
 
-            <article>
+            <article className="md:flex md:justify-center md:items-center">
+                <div className=" hidden md:block  md:w-full ">
+                    <CalendarHeatmap
+                        startDate={new Date('2026-01-01')}
+                        endDate={new Date('2026-12-31')}
+                        values={[
+                            { date: '2026-01-01', count: 1 },
+                            { date: '2026-01-22', count: 4 },
+                            { date: '2026-01-30', count: 2 },
+                        ]}
+                        classForValue={(value: { count: number }) => {
+                            if (!value) {
+                                return 'color-empty';
+                            }
+                            return `color-gitlab-${value.count}`;
+                        }}
+                    />
+                </div>
+                <div className="md:hidden pt-10">
+                    <CalendarHeatmap
+                        startDate={new Date('2026-01-29')}
+                        endDate={new Date('2026-05-29')}
+                        values={[
+                            { date: '2026-01-01', count: 1 },
+                            { date: '2026-01-22', count: 4 },
+                            { date: '2026-01-30', count: 2 },
+                        ]}
+                        classForValue={(value: { count: number }) => {
+                            if (!value) {
+                                return 'color-empty';
+                            }
+                            return `color-gitlab-${value.count}`;
+                        }}
+                    />
+                </div>
 
             </article>
         </section>
