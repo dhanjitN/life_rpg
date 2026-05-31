@@ -13,7 +13,7 @@ app.use("/api/auth/*", cors({
   origin: "http://localhost:5173",  
   allowHeaders: ["Content-Type", "Authorization"],
   allowMethods: ["GET", "POST", "OPTIONS"],
-  credentials: true,  // ← critical for cookies to work
+  credentials: true,  
 }))
 
 app.on(["POST", "GET"], "/api/auth/*", (c) => auth.handler(c.req.raw));
@@ -23,8 +23,10 @@ app.get("/", (c)=>{
 })
 
 import calendarRoute from "./routes/calendar.route.js"
+import userRoute from "./routes/user.route.js"
 
 app.route("/calendar", calendarRoute);
+app.route("/me", userRoute )
 
 export default {
   port: 3000,
