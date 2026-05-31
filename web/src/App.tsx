@@ -1,5 +1,6 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 import { Button } from "./components/ui/button";
+import { googleLogin } from "./lib/auth-client";
 const queryClient = new QueryClient();
 function App() {
   return (
@@ -23,8 +24,7 @@ function App() {
           </article>
         </section>
         <section className="pt-10 flex items-center justify-center">
-          
-          <Button className="text-2xl p-5 hover:cursor-pointer">Sign in with Google </Button>
+          <Button className="text-2xl p-5 hover:cursor-pointer" onClick={googleLogin}>Sign in with Google </Button>
         </section>
       </main>
     </QueryClientProvider>
