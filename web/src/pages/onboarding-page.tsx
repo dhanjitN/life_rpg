@@ -1,10 +1,45 @@
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
 
+
+import * as React from "react"
+import { useForm } from "@tanstack/react-form"
+import { toast } from "sonner"
+import * as z from "zod"
+import { Button } from "@/components/ui/button"
+import { Textarea } from "@/components/ui/textarea"
+import {
+    Card,
+    CardContent,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+} from "@/components/ui/card"
+import {
+    Field,
+    FieldDescription,
+    FieldError,
+    FieldGroup,
+    FieldLabel,
+} from "@/components/ui/field"
+import { Input } from "@/components/ui/input"
+import {
+    InputGroup,
+    InputGroupAddon,
+    InputGroupText,
+    InputGroupTextarea,
+} from "@/components/ui/input-group"
+
+const formSchema = z.object({
+    username: z.string()
+        .min(3, "Minimum 3 characters")
+        .max(32, "Maximum of 32 characters"),
+    
+    
+})
 
 export const OnBoardingPage = () => {
-    
+
+
     return (
         <section className="dark bg-background text-foreground min-h-screen w-full pt-5 px-5 flex flex-col">
             <h1 className="text-xl text-red-200 font-bold underline px-5 self-end">oneLife</h1>

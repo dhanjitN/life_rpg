@@ -21,7 +21,7 @@ function App() {
               <li>no headaches </li>
             </ul>
             
-          </article>r
+          </article>
         </section>
         <section className="pt-10 flex items-center justify-center">
           <Button className="text-2xl p-5 hover:cursor-pointer" onClick={googleLogin}>Sign in with Google </Button>
